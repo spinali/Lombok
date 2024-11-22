@@ -12,6 +12,7 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Car {
     private String model;
+    @EqualsAndHashCode.Include
     private String brand;
     private int year;
     private int price;
@@ -22,7 +23,7 @@ public class Car {
 class DemoCar {
 
     public static void main(String[] args) {
-        Car car1 = new Car("GLE", "Mercedes", 2010, 100000, "white", 5);
+        Car car1 = new Car("Q3", "Audi", 2010, 100000, "white", 5);
         Car car2 = new Car("Q5", "Audi", 2020, 250000, "black", 5);
 
         System.out.println(car1);
